@@ -1,0 +1,37 @@
+<project>
+    <!-- ... other configurations ... -->
+    
+    <dependencies>
+        <!-- JavaFX Modules (choose what you need) -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>21</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>  <!-- Only if using FXML -->
+            <version>21</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-swing</artifactId> <!-- Only if using Swing interop (JFXPanel) -->
+            <version>21</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Configure JavaFX Maven Plugin -->
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version>
+                <configuration>
+                    <mainClass>com.yourpackage.MainApp</mainClass>
+                    <modules>javafx.controls,javafx.fxml</modules>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
